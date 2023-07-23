@@ -6,9 +6,12 @@ import React from "react";
 
 export default function Header(){
     return(
-        <header>
-            <img/>
-            <h2>Header Component</h2>
+        <header className="header">
+            <img src="./images/troll.png"
+                className="header--image"
+             />
+            <h2 className="header--title">Meme Generator</h2>
+            <h4 className="header-project">React Course - Project 3</h4>
         </header>
        
     )
