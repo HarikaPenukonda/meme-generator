@@ -51,5 +51,11 @@ main{
     cursor: pointer;
 }
 
+.meme--image{
+    padding-left: 200px;
+    width: 500px;
+    height: 400px;
+}
+
 
 

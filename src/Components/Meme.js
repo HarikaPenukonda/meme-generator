@@ -9,18 +9,17 @@ export default function Meme(){
             - Below the div.form, add an <img/> and set the src to the new `memeImage` state you created
         
     */
-    let memeImage = React.useState("")
+    const [memeImage,setMemeImage] = React.useState("")
 
     function getMemeImage(){
-        console.log("clicked")
         const memesArray = memesData.data.memes
-        const randomNumber = Math.random(Math.floor() * memesArray.length)
-        const url = memesArray[randomNumber].url // the url of the meme
-        memeImage = url
+        const randomNumber = Math.floor(Math.random() * memesArray.length)
+        //const url = memesArray[randomNumber].url // the url of the meme
+        setMemeImage(memesArray[randomNumber].url)
     }
         return(
             <main>
-                <form className="form">
+                <div className="form">
                 <input 
                     type="text"
                     className="form--input"
@@ -31,11 +30,15 @@ export default function Meme(){
                     className="form--input" 
                     placeholder="Botton text"   
                     />
+                <button onClick={getMemeImage} className="form--button">Get a new image</button>
                 <img src={memeImage}
                     alt="meme"
+                    className="meme--image"
                 />
-                <button onClick={getMemeImage} className="form--button">Get a new image</button>
-            </form>
+                
+                
+                {/* <p>{memeImage}</p> */}
+            </div>
             </main>
             
         )
