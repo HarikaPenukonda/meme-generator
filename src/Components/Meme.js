@@ -9,7 +9,7 @@ export default function Meme(){
             - Below the div.form, add an <img/> and set the src to the new `memeImage` state you created
         
     */
-    const [memeImage,setMemeImage] = React.useState("")
+    const [memeImage,setMemeImage] = React.useState("https://i.imgflip.com/30b1gx.jpg")
 
     function getMemeImage(){
         const memesArray = memesData.data.memes
