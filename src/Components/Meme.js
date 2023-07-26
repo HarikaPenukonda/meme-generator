@@ -3,12 +3,26 @@ import memesData from "../memesData";
 
 export default function Meme(){
     /*
-        Challenge: Save the random meme URL in state
-            - Create new state called  `memeImage` with an empty string as default
-            - when the getMemeImage function is called, update the `memeImage` state to be the random chosen image URL
-            - Below the div.form, add an <img/> and set the src to the new `memeImage` state you created
-        
+         Challenge : 
+            1. Update our state to save the meme-related 
+            data as an object called `meme`. It should have the following 3 properties:
+            topText, bottomText, randomImage
+
+            2. The 2 text states can default to empty strings for now,
+            and randomImage should be default to "https://i.imgflip.com/30b1gx.jpg"
+
+            3. Next, create a new state variable called `allMemeImages`
+            which will default to `memesData`
+
+            4. Lastly, update the `getMemeImage` function and the markup to reflect our newly 
+            reformed state object and array in the correct way.
     */
+    const [meme,setMeme] = React.useState({
+        topText : "",
+        bottomText : "",
+        randomImage : "https://i.imgflip.com/30b1gx.jpg"
+    })
+
     const [memeImage,setMemeImage] = React.useState("https://i.imgflip.com/30b1gx.jpg")
 
     function getMemeImage(){
