@@ -31,9 +31,10 @@ export default function Meme(){
 
     console.log(meme)
     function handleChange(event){
+        const {name,value} = event.target
         setMeme(prevData => ({
             ...prevData,
-            [event.target.name] : event.target.value
+            [name] : value
         }))
     }
         return(
@@ -60,7 +61,8 @@ export default function Meme(){
                     alt="meme"
                     className="meme--image"
                 />
-                
+                <h2 className="meme--text top">One does not simply</h2>
+                <h2 className="meme--text bottom">Walk into mordor</h2>
                 
                 {/* <p>{memeImage}</p> */}
             </div>
