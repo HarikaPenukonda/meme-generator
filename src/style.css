@@ -68,7 +68,7 @@ main {
     border-radius: 3px;
 }
 
-.meme--text {
+.meme--text{
     position: absolute;
     width: 80%;
     text-align: center;
@@ -94,7 +94,7 @@ main {
 }
 
 .bottom {
-    bottom: 0;
+   bottom: 0;
 }
 
 .top {

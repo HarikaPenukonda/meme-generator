@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Components/Header";
 import Meme from "./Components/Meme";
+//import MemePractice from "./Components/MemePractice";
 
 /*
     Challenge:
@@ -14,6 +15,7 @@ export default function App(){
         <div>
             <Header/>
             <Meme/>
+            {/* <MemePractice/> */}
         </div>
     )
 }
